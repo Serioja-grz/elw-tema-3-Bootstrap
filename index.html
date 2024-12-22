@@ -1,0 +1,998 @@
+<!DOCTYPE html>
+<html lang="ro">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="author" content="Grumeza Maria-Magdalena">
+    <meta name="keywords" content="YOGA, Oaza Serenității, mindfullness">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Descoperă un loc special dedicat echilibrului și 
+        binefacerii interioare. La Oaza Serenității, îți oferim o varietate de cursuri de yoga
+        pentru toate nivelurile, într-un mediu cald și primitor. Cu ajutorul instructorilor
+        noștri experimentați, vei putea explora tehnici de yoga, meditație și mindfulness, 
+        toate menite să îți îmbunătățească sănătatea fizică și mentală. Alătură-te comunității 
+        noastre și începe călătoria ta spre o viață mai echilibrată și armonioasă.">
+    <title>Oaza Serenității: Yoga Studio</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <style>
+        body {
+            background-color: #DDEECC;
+        }
+
+        h1 {
+            font-family: 'Merriweather', serif;
+            font-size: large;
+            color: #a76092;
+            text-shadow: 2px 0px 1px #000;
+            font-weight: bold;
+            text-align: start;
+
+        }
+
+        h2 {
+            font-family: 'Merriweather', serif;
+            font-size: 35px;
+            color: #a76092;
+            text-shadow: 1px 1px 1px #000;
+            font-weight: bold;
+            margin: 20px;
+            text-decoration: underline;
+            text-decoration-color: #a76092;
+            padding-top: 10px;
+            padding-bottom: 10px;
+            text-align: center;
+        }
+
+
+
+
+        h3 {
+            font-family: 'Merriweather', serif;
+            font-size: 30px;
+            color: #a76092;
+            text-shadow: 1px 1px 1px #000;
+            font-weight: bold;
+            margin: 15px;
+        }
+
+        h4 {
+            font-family: 'Merriweather', serif;
+            font-size: 25px;
+            color: #a76092;
+            text-shadow: 1px 1px 1px #000;
+            font-weight: bold;
+            margin: 15px;
+        }
+
+        a {
+            font-family: 'Merriweather', serif;
+            text-decoration: none;
+            font-weight: bold;
+            color: #a76092;
+        }
+
+        p {
+            font-family: 'Georgia', serif;
+            font-size: 20px;
+            color: #252525;
+            font-weight: normal;
+            margin: 10px;
+            padding: 10px;
+            border-radius: 5px;
+            text-shadow: 1px 1px 1px #000;
+        }
+
+        li {
+            list-style-type: none;
+            font-size: 20px;
+            padding-left: 10 px;
+
+        }
+
+        li::before {
+            content: "🌿";
+            /* Emoji bulet */
+
+        }
+
+
+        body {
+
+            margin: 15px;
+            padding: 15px;
+            background-color: #f4f0f8;
+        }
+
+
+
+
+        .footer {
+            background-color: #282828;
+            color: #f4f4f4;
+            padding: 20px 10px;
+            text-align: center;
+            font-family: Arial, sans-serif;
+            border-top: 3px solid #282828
+        }
+
+        .footer-content {
+            max-width: 800px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 10px;
+        }
+
+        /* nume site si C de la Copyright */
+        .site-name {
+            font-size: 1.5em;
+            font-weight: bold;
+            color: #a76092;
+        }
+
+        .footer p {
+            margin: 0;
+            font-size: 0.9em;
+            color: #a76092;
+        }
+
+        /* Social Media Icons */
+        .social-icons {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-top: 10px;
+        }
+
+        .social-icons .icon {
+            width: 40px;
+            height: 40px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 50%;
+            /* Face rotund */
+            background-color: #d7e7f8;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+            overflow: hidden;
+            /* Imaginile stau in cerc */
+        }
+
+        .social-icons .icon img {
+            width: 24px;
+            height: 24px;
+            object-fit: contain;
+        }
+
+        .social-icons .icon:hover {
+            background-color: #a76092;
+            transform: scale(1.1);
+            /*responsive cu efect de zoom */
+        }
+
+        .contact-info a {
+            color: #a76092;
+            text-decoration: none;
+        }
+
+        .contact-info a:hover {
+            text-decoration: underline
+        }
+
+        .card-container {
+            display: flex;
+            gap: 20px;
+        }
+
+        .card {
+            flex: 1;
+            background-color: #fff;
+            padding: 10px;
+            border: 1px solid #ddd;
+        }
+
+        .accordion {
+            padding-top: 20px;
+            padding-bottom: 20px;
+        }
+
+        .img {
+            width: 100%;
+            border-radius: 5px;
+        }
+
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            /* Ensures the content wraps on smaller screens */
+            gap: 16px;
+            /* Adds space between the map and text */
+            padding: 16px;
+        }
+
+        .map,
+        .text {
+            flex: 1 1 45%;
+            /* Flexible items with a basis of 45% */
+            min-width: 300px;
+            /* Ensures a minimum width for smaller screens */
+        }
+
+        iframe {
+            width: 100%;
+            /* Makes the map responsive */
+            height: 300px;
+            /* Default height */
+            border: 0;
+        }
+
+        @media (max-width: 768px) {
+
+            .map,
+            .text {
+                flex-basis: 100%;
+                /* Stacks the elements on smaller screens */
+            }
+        }
+
+        .container-fluid img {
+
+            height: 40px;
+            margin-left: 10px;
+            margin-right: 10px;
+            object-fit: contain;
+            align-items: flex-start;
+
+
+        }
+
+        .carousel-item p {
+            background-color: #000000;
+            color: #a76092;
+
+
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+
+        <!-- nav  -->
+
+        <nav class="navbar fixed-top navbar-expand-lg sticky-top bg-dark border-bottom border-body"
+            data-bs-theme="dark">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="index.html">
+                    <img class="logo" src="logo.jpg" alt="logo oaza serenitatii"></a>
+                <a class="navbar-brand" href="index.html">
+                    <h1>Oaza Serenității: Yoga Studio</h1>
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#Servicii">Servicii</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#Tipuridepachete">Tipuri de pachete</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#FAQ">FAQ</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#Instructori">Instructori</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#Recenzii">Recenzii</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#Program">Program</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#Locație">Locație</a>
+                        </li>
+
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+
+
+        <!-- carusel cu poze -->
+
+        <div id="carouselExampleCaptions" class="carousel slide">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
+                    aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
+                    aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
+                    aria-label="Slide 3"></button>
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="3"
+                    aria-label="Slide 4"></button>
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="4"
+                    aria-label="Slide 5"></button>
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="5"
+                    aria-label="Slide 6"></button>
+            </div>
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="Carusel nav 1.jpg" class="d-block w-100"
+                        alt="imagine stilizată cu o persoană care face yoga">
+                    <div class="carousel-caption d-none d-md-block">
+                        <p>Respiră adânc și lasă-te purtat într-o lume a liniștii și serenității </p>
+                        <p>Evadează din universul citadin spre a regăsi legatura dintre mintea și corpul tău!</p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="Carusel nav 2.jpg" class="d-block w-100"
+                        alt="Mai multe persoane asistând la un curs de yoga">
+                    <div class="carousel-caption d-none d-md-block">
+                        <p>Respiră adânc și lasă-te purtat într-o lume a liniștii și serenității</p>
+                        <p>Evadează din universul citadin spre a regăsi legatura dintre mintea și corpul tău!</p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="Carusel nav 3.jpeg" class="d-block w-100" alt="O femeie care face yoga pe un covor roz">
+                    <div class="carousel-caption d-none d-md-block">
+                        <p>Respiră adânc și lasă-te purtat într-o lume a liniștii și serenității</p>
+                        <p>Evadează din universul citadin spre a regăsi legatura dintre mintea și corpul tău!</p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="Carusel nav 4.jpg" class="d-block w-100" alt="O femeie care face yoga pe un covor rotund">
+                    <div class="carousel-caption d-none d-md-block">
+                        <p>Respiră adânc și lasă-te purtat într-o lume a liniștii și serenității</p>
+                        <p>Evadează din universul citadin spre a regăsi legatura dintre mintea și corpul tău!</p>
+                    </div>
+                </div>
+
+                <div class="carousel-item">
+                    <img src="Carusel nav 5.jpg" class="d-block w-100" alt="Două femei în poziții de yoga">
+                    <div class="carousel-caption d-none d-md-block">
+                        <p>Respiră adânc și lasă-te purtat într-o lume a liniștii și serenității</p>
+                        <p>Evadează din universul citadin spre a regăsi legatura dintre mintea și corpul tău!</p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <img src="Carusel nav 6.jpg" class="d-block w-100"
+                        alt="Mai multe persoane asistând la un curs de yoga">
+                    <div class="carousel-caption d-none d-md-block">
+                        <p>Respiră adânc și lasă-te purtat într-o lume a liniștii și serenității</p>
+                        <p>Evadează din universul citadin spre a regăsi legatura dintre mintea și corpul tău!</p>
+                    </div>
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"
+                data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions"
+                data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+    </header>
+
+
+    <main>
+
+        <!-- tipuri de servicii cards -->
+        <section id="Servicii">
+            <h2>Tipuri de Servicii</h2>
+
+
+            <div class="row row-cols-1 row-cols-md-2 g-4">
+                <div class="col">
+                    <div class="card">
+                        <img src="servicii-cursuri de yoga.jpg" class="card-img-top" alt="Doua persoane care fac yoga">
+                        <div class="card-body">
+                            <h5 class="card-title">Cursuri de Yoga</h5>
+                            <ul class="card-text">
+                                <li>Yoga pentru începători, intermediari și avansați</li>
+                                <li>Yoga prenatală și postnatală</li>
+                                <li>Yoga terapeutică</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card">
+                        <img src="Servicii-spa.jpg" class="card-img-top" alt="Patru pietre cu mesaje drăguțe">
+                        <div class="card-body">
+                            <h5 class="card-title">Servicii Spa</h5>
+                            <ul class="card-text">
+                                <li>Masaj terapeutic</li>
+                                <li>Terapie cu arome</li>
+                                <li>Reflexoterapie</li>
+                            </ul>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card">
+                        <img src="servicii ateliere si evenim.jpg" class="card-img-top"
+                            alt="Un grup de persoane care perticipă la un atelier">
+                        <div class="card-body">
+                            <h5 class="card-title">Ateliere și Evenimente</h5>
+                            <ul class="card-text">
+                                <li>Workshop-uri tematice (ex. Yoga și Nutriție, Yoga și Dezvoltare Personală)</li>
+                                <li>Retreat-uri de weekend</li>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card">
+                        <img src="servicii meditatie si mindfulness.jpg" class="card-img-top"
+                            alt="un grup de persoane care mediteaza">
+                        <div class="card-body">
+                            <h5 class="card-title">Meditație și Mindfulness</h5>
+                            <ul class="card-text">
+                                <li>Sesiuni de meditație ghidată</li>
+                                <li>Ateliere de mindfulness</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- tipuri de pachete pret cards-->
+        <section id="Tipuridepachete">
+            <h2>Tipuri de Pachete</h2>
+            <p>
+                La Oaza Serenității, oferim o varietate de pachete pentru a se potrivi
+                nevoilor și obiectivelor tale. Alege pachetul care ți se potrivește
+                cel mai bine și începe călătoria ta către echilibru și binele suprem.
+            </p>
+
+
+            <div class="card-group">
+                <div class="card">
+                    <img src="pachete cristal.jpg" class="card-img-top"
+                        alt="o statuietă mică cu Budha între două cristale">
+                    <div class="card-body">
+                        <h5 class="card-title">Pachetul De Bază</h5>
+                        <ul class="card-text">
+                            <li>Acces la toate cursurile de yoga pentru începători</li>
+                            <li>Instructori dedicați pentru îndrumare personalizată</li>
+                            <li>Relaxare și meditație ghidată</li>
+                        </ul>
+                        <p>Preț:150 RON</p>
+                        <a href="https://www.bancatransilvania.ro/" class="btn btn-dark" target="_blank">Alătură-te</a>
+                    </div>
+                </div>
+
+
+                <div class="card">
+                    <img src="Pachete pietre.jpg" class="card-img-top" alt="pietre plate așezate ăn formă de turn">
+                    <div class="card-body">
+                        <h5 class="card-title">Pachetul Avansat</h5>
+                        <ul class="card-text">
+                            <li>Acces la cursuri intermediare și avansate de yoga</li>
+                            <li>Sesiuni de yoga private cu instructori experți</li>
+                            <li>Ateliere tematice și retrageri de weekend</li>
+                        </ul>
+                        <p> </p>
+                        <p>Preț:230 RON</p>
+
+                        <a href="https://www.bancatransilvania.ro/" class="btn btn-dark" target="_blank">Alătură-te</a>
+                    </div>
+                </div>
+
+
+                <div class="card">
+                    <img src="pachete nufar.jpg" class="card-img-top" alt="o floare de nufăr">
+                    <div class="card-body">
+                        <h5 class="card-title">Pachetul Premium</h5>
+                        <ul class="card-text">
+                            <li>Acces nelimitat la toate cursurile și atelierele</li>
+                            <li>Sesiuni de consultanță pentru dezvoltare personală</li>
+                            <li>Acces la spa-ul nostru pentru relaxare completă</li>
+                        </ul>
+                        <p>Preț:300 RON</p>
+                        <span
+                            class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">-25%</span>
+                        <a href="https://www.bancatransilvania.ro/" class="btn btn-dark" target="_blank">Alătură-te</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Acordeon principii si beneficii -->
+
+        <section id="FAQ">
+            <div class="accordion" id="accordionExample">
+                <div class="accordion-item">
+                    <h2> FAQ </h2>
+
+                    <div class="accordion-item">
+
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                            <h3>Care sunt principiile?</h3>
+                        </button>
+
+
+                        <div id="collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                            <div class="accordion-body">
+                                <h4> Ahimsa (Non-Violență)</h4>
+                                <p>Practicarea non-violenței față de sine și față de ceilalți. Aceasta include gânduri,
+                                    cuvinte și acțiuni. Ahimsa este sențială pentru a cultiva o atitudine de compasiune
+                                    și
+                                    bunătate.</p>
+
+
+                                <h4> Satya (Adevăr) </h4>
+                                <p>A trăi în adevăr și a fi autentic. Aceasta implică sinceritatea față de sine și față
+                                    de
+                                    ceilalți, evitând minciunile și înșelăciunea. Satya te ajută să construiești relații
+                                    bazate pe încredere și integritate.</p>
+                                <h4>Brahmacharya (Moderație)</h4>
+                                <p>Practicarea moderației în toate aspectele vieții. Aceasta include gestionarea
+                                    energiei și
+                                    a dorințelor pentru a menține echilibrul și armonia. Brahmacharya încurajează
+                                    concentrarea și canalizarea energiei într-un mod pozitiv.</p>
+                                <h4>Aparigraha (Non-Aținere)</h4>
+                                <p>Renunțarea la atașamente și posesii excesive. Aparigraha te învață să trăiești simplu
+                                    și
+                                    să apreciezi ceea ce ai, fără a căuta constant mai mult. Aceasta ajută la eliberarea
+                                    de
+                                    dorințele materiale și la găsirea fericirii interioare.</p>
+                                <h4>Santosha (Mulțumire)</h4>
+                                <p>Practicarea mulțumirii și acceptarea momentului prezent. Santosha te încurajează să
+                                    găsești bucurie și pace în ceea ce ai deja, fără a căuta fericirea în exterior.</p>
+                                <p>Află mai multe despre
+
+                                    <a href="https://ro.scribd.com/document/325890714/Yoga-principii-generale-doc"
+                                        target="_blank"> principiile yoga! </a>
+                                </p>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                        <h3>Care sunt beneficiile Yoga?</h3>
+                    </button>
+
+
+                    <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                            <h4> Beneficii fizice </h4>
+                            <ul>
+                                <li>Flexibilitate: Practica regulată de yoga ajută la îmbunătățirea flexibilității prin
+                                    întinderea și alungirea mușchilor și articulațiilor.</li>
+                                <li>Forță: Anumite posturi de yoga întăresc mușchii și cresc rezistența fizică.</li>
+                                <li>Echilibru și Coordonare: Yoga implică adesea exerciții de echilibru care
+                                    îmbunătățesc
+                                    coordonarea și stabilitatea.</li>
+                                <li>Respirație: Tehnicile de respirație (pranayama) folosite în yoga îmbunătățesc
+                                    capacitatea pulmonară și eficiența respiratorie.</li>
+                                <li>Respirație: Tehnicile de respirație (pranayama) folosite în yoga îmbunătățesc
+                                    capacitatea pulmonară și eficiența respiratorie.</li>
+                                <li>Postură: Practicarea yoga poate corecta postura și alinia coloana vertebrală.</li>
+                            </ul>
+
+                            <h4> Beneficii Mentale și Emoționale </h4>
+                            <ul>
+                                <li>Reducerea Stresului: Yoga ajută la eliberarea tensiunii și la reducerea nivelului de
+                                    stres prin tehnici de relaxare și meditație.</li>
+                                <li>Claritate Mentală: Practica regulată poate îmbunătăți concentrarea și claritatea
+                                    mentală.</li>
+                                <li>Creșterea Stării de Spirit: Yoga stimulează producția de endorfine, hormonii
+                                    fericirii,
+                                    și poate ajuta la reducerea simptomelor de anxietate și depresie.</li>
+                                <li>Managementul Emotiilor: Yoga te învață să gestionezi emoțiile și să te conectezi mai
+                                    bine cu propriul sine.</li>
+                            </ul>
+                            <h4>Beneficii Spirituale</h4>
+                            <ul>
+                                <li>Conștientizare de Sine: Yoga încurajează introspecția și auto-reflecția, ajutându-te
+                                    să
+                                    devii mai conștient de gândurile și acțiunile tale.</li>
+                                <li>Pacea Interioară: Prin meditație și practici de mindfulness, yoga te poate ajuta să
+                                    atingi o stare de pace și echilibru interior.</li>
+                                <li>Conexiune Spirituală: Practica yoga te poate ajuta să te conectezi la o dimensiune
+                                    spirituală, indiferent de religia sau credințele tale personale.</li>
+                            </ul>
+
+
+                            <p>Află mai multe despre
+                                <a href="https://www.health.harvard.edu/staying-healthy/yoga-benefits-beyond-the-mat"
+                                    target="_blank"> beneficii yoga! </a>
+                            </p>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+        <!-- carduri instructori -->
+
+        <section id="Instructori">
+            <h2>Instructori</h2>
+
+
+
+            <div class="row row-cols-1 row-cols-md-3 g-4">
+                <div class="col">
+                    <div class="card h-100">
+                        <img src="intructori 1.jpg" class="card-img-top" alt="Poză cu Maria Popescu">
+                        <div class="card-body">
+                            <h3 class="card-title"><span>Maria Popescu</span> <span style="display: block;">(28
+                                    ani)</span>
+                            </h3>
+                            <p class="card-text"> Maria este o yoghiniță dedicată cu peste 5 ani de experiență în
+                                practică
+                                și predare.
+                                Absolventă a unei școli de yoga din India, Maria se specializează în Hatha Yoga și
+                                tehnici
+                                de respirație pranayama.
+                                Ea crede că yoga este mai mult decât exercițiu fizic, fiind o cale de auto-descoperire
+                                și
+                                vindecare interioară.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="col">
+                    <div class="card h-100">
+                        <img src="instructori 2.jpg" class="card-img-top" alt="Poză cu Ana Dobre">
+                        <div class="card-body">
+                            <h3 class="card-title"><span>Ana Dobre</span> <span style="display: block;">(31 ani)</span>
+                            </h3>
+                            <p class="card-text">Ana a descoperit yoga în perioada facultății și de atunci nu a mai
+                                privit
+                                înapoi. Cu o certificare
+                                internațională în Vinyasa Yoga, Ana își pune accentul pe fluiditatea mișcărilor și
+                                sincronizarea
+                                acestora cu respirația. Ea organizează sesiuni speciale de yoga pentru mamele tinere și
+                                este
+                                pasionată
+                                de crearea unei comunități de susținere prin practica ei.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card h-100">
+                        <img src="intructori 3.jpg" class="card-img-top" alt="Poză cu Elena Dumitru">
+                        <div class="card-body">
+                            <h3 class="card-title"><span>Elena Dumitru</span> <span style="display: block;">(27
+                                    ani)</span>
+                            </h3>
+                            <p class="card-text">Elena este o fostă gimnastă care și-a găsit în yoga o nouă pasiune. Ea
+                                a
+                                studiat Ashtanga Yoga în
+                                Bali și aduce în clasă un amestec de putere și flexibilitate. Elena se concentrează pe
+                                alinierea
+                                corectă și progresul gradual al fiecărui practicant. Clasa ei este energică și inspiră
+                                pe
+                                toată
+                                lumea să-și depășească limitele.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card h-100">
+                        <img src="instructori 4.jpg" class="card-img-top" alt="Poză cu Andrei Marinescu">
+                        <div class="card-body">
+                            <h3 class="card-title"><span>Andrei Marinescu</span> <span style="display: block;">(29
+                                    ani)</span></h3>
+                            <p class="card-text">Andrei este un instructor de yoga care pune un mare accent pe latura
+                                spirituală a practicii.
+                                Cu o certificare în Kundalini Yoga, Andrei își ghidează elevii prin tehnici de
+                                meditație,
+                                mantre
+                                și asane, pentru a atinge o stare de conștientizare profundă. Este cunoscut pentru
+                                abordarea
+                                lui
+                                holistică și pentru felul în care reușește să creeze un spațiu sacru pentru practicanți.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card h-100">
+                        <img src="instructori 5.jpg" class="card-img-top" alt="Poză cu Ion Grigorescu">
+                        <div class="card-body">
+                            <h3 class="card-title"><span>Ion Grigorescu</span> <span style="display: block;">(32
+                                    ani)</span>
+                            </h3>
+                            <p class="card-text"> Ion este un instructor cu experiență în Iyengar Yoga, recunoscut
+                                pentru
+                                precizia și atenția
+                                la detalii. După ce a studiat sub îndrumarea unor maeștrii renumiți din India, Ion aduce
+                                un
+                                nivel ridicat de profesionalism și cunoștințe tehnice în fiecare clasă. El crede că
+                                orice
+                                persoană poate beneficia de yoga, indiferent de nivelul său de fitness sau
+                                flexibilitate.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col">
+                    <div class="card h-100">
+                        <img src="instructori 6.jpg" class="card-img-top" alt="Poză cu Andrei Stoica">
+                        <div class="card-body">
+                            <h3 class="card-title"><span>Andrei Stoica</span> <span style="display: block;">(27
+                                    ani)</span>
+                            </h3>
+                            <p class="card-text"> Andrei Stoica este un instructor de yoga cu o pasiune profundă pentru
+                                această practică și o experiență de peste 10 ani. Certificat în Ashtanga și Vinyasa
+                                yoga, Andrei este recunoscut pentru abordarea sa echilibrată, care îmbină puterea fizică
+                                cu calmul mental.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- carduri recenzii -->
+        <section id="Recenzii">
+            <h2>Recenzii</h2>
+            <div class="card-group">
+                <div class="card">
+
+                    <div class="card-body">
+                        <h3 class="card-title">User: YogaLover89</h3>
+                        <p class="card-text">Recenzie: "Oaza Serenității este locul ideal pentru a te reconecta cu tine
+                            însuți.
+                            Instructorii sunt extrem de atenți și își adaptează clasele în funcție de nevoile fiecăruia.
+                            Atmosfera este liniștitoare, iar sala de yoga este mereu curată și bine întreținută.
+                            Recomand cu căldură tuturor celor care doresc să încerce yoga pentru prima dată sau să își
+                            aprofundeze practica." 🌿✨</p>
+
+                    </div>
+                </div>
+                <div class="card">
+
+                    <div class="card-body">
+                        <h3 class="card-title">User: ZenMaster21</h3>
+                        <p class="card-text">Recenzie: "Am descoperit Oaza Serenității acum câteva luni și pot spune că
+                            a
+                            fost o
+                            transformare pentru mine.
+                            Sesiunile de yoga sunt intense, dar extrem de relaxante. Instructorii sunt foarte
+                            profesioniști
+                            și
+                            te ajută să îți depășești limitele fără presiune.
+                            Fiecare clasă este o experiență unică și mereu plec de acolo cu o stare de bine și echilibru
+                            interior." 🙏🌸</p>
+
+                    </div>
+                </div>
+                <div class="card">
+
+                    <div class="card-body">
+                        <h3 class="card-title">User: PeaceSeeker</h3>
+                        <p class="card-text">Recenzie: "La Oaza Serenității am găsit exact ce căutam: un loc unde să mă
+                            relaxez
+                            și să mă reîncarc cu energie pozitivă.
+                            Instructorii sunt prietenoși și foarte bine pregătiți, iar cursurile sunt variate și
+                            interesante.
+                            Îmi place foarte mult că oferă și ateliere speciale și sesiuni de meditație. Este un
+                            adevărat
+                            refugiu pentru mine în mijlocul agitației zilnice." 🧘‍♀️💖</p>
+
+                    </div>
+                </div>
+            </div>
+
+        </section>
+        <!-- acordeon program -->
+
+        <section id="Program">
+            <div class="accordion" id="accordionExample">
+                <div class="accordion-item">
+                    <h2> Program </h2>
+                    <div class="accordion-item">
+
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                            <h3>Luni</h3>
+                        </button>
+
+
+                        <div id="collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                            <div class="accordion-body">
+                                <ul>
+                                    <li>08:00 - 09:00: Yoga pentru Începători</li>
+                                    <li>10:00 - 11:00: Hatha Yoga</li>
+                                    <li>18:00 - 19:00: Vinyasa Flow</li>
+                                    <li>20:00 - 21:00: Meditație Ghidată</li>
+                                </ul>
+
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="accordion-item">
+
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
+                            <h3>Marți</h3>
+                        </button>
+
+
+                        <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                            <div class="accordion-body">
+                                <ul>
+                                    <li>07:00 - 08:00: Yoga pentru Flexibilitate</li>
+                                    <li>12:00 - 13:00: Ashtanga Yoga</li>
+                                    <li>17:00 - 18:00: Yoga Prenatală</li>
+                                    <li>19:00 - 20:00: Yoga pentru Relaxare</li>
+                                </ul>
+
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="accordion-item">
+
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapseFour" aria-expanded="true" aria-controls="collapseFour">
+                            <h3>Joi</h3>
+                        </button>
+
+
+                        <div id="collapseFour" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                            <div class="accordion-body">
+                                <ul>
+                                    <li>07:30 - 08:30: Yoga pentru Întărirea Core-ului</li>
+                                    <li>12:30 - 13:30: Restorative Yoga</li>
+                                    <li>17:30 - 18:30: Yoga pentru Stres și Anxietate</li>
+                                    <li>19:30 - 20:30: Yin Yoga</li>
+                                </ul>
+
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="accordion-item">
+
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapseFive" aria-expanded="true" aria-controls="collapseFive">
+                            <h3>Vineri</h3>
+                        </button>
+
+
+                        <div id="collapseFive" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                            <div class="accordion-body">
+                                <ul>
+                                    <li>08:00 - 09:00: Yoga pentru Flexibilitate</li>
+                                    <li>10:00 - 11:00: Hatha Yoga</li>
+                                    <li>18:00 - 19:00: Yoga pentru Energie și Vitalitate</li>
+                                    <li>20:00 - 21:00: Meditație Ghidată</li>
+                                </ul>
+
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="accordion-item">
+
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapseSix" aria-expanded="true" aria-controls="collapseSix">
+                            <h3>Sâmbătă</h3>
+                        </button>
+
+
+                        <div id="collapseSix" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                            <div class="accordion-body">
+                                <ul>
+                                    <li>09:00 - 10:00: Vinyasa Flow</li>
+                                    <li>11:00 - 12:00: Yoga pentru Începători</li>
+                                    <li>13:00 - 14:00: Atelier Tematic: Yoga și Nutriție</li>
+                                    <li>16:00 - 17:00: Yoga pentru Relaxare Profundă</li>
+                                </ul>
+
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div class="accordion-item">
+
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapseSeven" aria-expanded="true" aria-controls="collapseSeven">
+                            <h3>Duminică</h3>
+                        </button>
+
+
+                        <div id="collapseSeven" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+                            <div class="accordion-body">
+                                <ul>
+                                    <li>10:00 - 11:00: Yoga și Meditație în Natură (în parc)</li>
+                                    <li>12:00 - 13:00: Yoga pentru Întregul Corp</li>
+                                    <li>15:00 - 16:00: Sesiune Privată de Yoga</li>
+                                    <li>18:00 - 19:00: Yoga pentru Flexibilitate</li>
+                                </ul>
+
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+
+
+            </div>
+        </section>
+
+        <!-- harta -->
+        <section id="Locație">
+            <div class="container">
+
+                <div class="map">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5463.646284003169!2d23.662227052037302!3d46.78808920428483!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47490b5418a6d5b5%3A0x436401762fe5fa9c!2sMagic%20Forest!5e0!3m2!1sro!2sro!4v1732698589623!5m2!1sro!2sro"
+                        allowfullscreen="" loading="lazy">
+                    </iframe>
+                </div>
+
+
+                <div class="text">
+                    <h2>Locație</h2>
+
+                    <p>Strada Tranquilității, Nr. 15, Etaj 2, Cluj-Napoca, Cluj, România</p>
+                    <p>Telefon: +40 123 456 789</p>
+                    <p>Email: contact@oazaserentatii.ro</p>
+
+                </div>
+            </div>
+
+        </section>
+
+
+
+
+    </main>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <p class="site-name">Oaza Serenității</p>
+            <p>&copy; 2024 Company, Inc. All rights reserved.</p>
+            <div class="social-icons">
+                <a href="https://www.facebook.com" target="_blank" class="icon facebook" aria-label="Facebook">
+                    <img src="fb flat icon.png" alt="Facebook">
+                </a>
+                <a href="https://www.instagram.com" target="_blank" class="icon instagram" aria-label="Instagram">
+                    <img src="ig flat icon.png" alt="Instagram">
+                </a>
+                <div class="contact-info">
+                    <a href="https://mail.google.com" target="_blank" class="icon mail" aria-label="Mail">
+                        <img src="mail icon.png" alt="mail">
+                    </a>
+
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous">
+        </script>
+
+</body>
